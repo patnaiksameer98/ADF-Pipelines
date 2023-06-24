@@ -1,0 +1,14 @@
+{
+	"name": "LMN34-ADF",
+	"properties": {
+		"globalConfigurations": {
+			"PipelineBillingEnabled": "true"
+		}
+	},
+	"location": "southindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c9f124ec-9d29-4547-a4ac-91384efb331e",
+		"tenantId": "64dc9e47-89e6-4685-bf7c-c61556cc3b35"
+	}
+}

@@ -1,0 +1,11 @@
+{
+	"name": "ls_connect_keyvault",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureKeyVault",
+		"typeProperties": {
+			"baseUrl": "https://lmn34-keyvault.vault.azure.net/"
+		}
+	}
+}
