@@ -1,0 +1,37 @@
+{
+	"name": "ds_adls_csv_src",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_connect_adls",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"File_Path": {
+				"type": "string"
+			},
+			"File_Name": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobFSLocation",
+				"fileName": {
+					"value": "@dataset().File_Name",
+					"type": "Expression"
+				},
+				"fileSystem": {
+					"value": "@dataset().File_Path",
+					"type": "Expression"
+				}
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
