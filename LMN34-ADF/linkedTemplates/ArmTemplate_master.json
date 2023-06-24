@@ -7,6 +7,58 @@
 			"metadata": "Data Factory name",
 			"defaultValue": "LMN34-ADF"
 		},
+		"ls_connect_adls_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_connect_adls'"
+		},
+		"ls_connect_blob_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_connect_blob'"
+		},
+		"ls_connect_filesystem_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_connect_filesystem'"
+		},
+		"ls_connect_sql_server_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_connect_sql_server'",
+			"defaultValue": "Integrated Security=True;Data Source=localhost\\SQLEXPRESS;Initial Catalog=localDB"
+		},
+		"ls_connect_sql_server_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'ls_connect_sql_server'"
+		},
+		"ls_connect_adls_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://lmn34datalake.dfs.core.windows.net/"
+		},
+		"ls_connect_aws_s3_properties_typeProperties_accessKeyId": {
+			"type": "object",
+			"defaultValue": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_connect_keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "lmn34-aws-s3-accessID"
+			}
+		},
+		"ls_connect_filesystem_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "\\\\LAPTOP-EBNIBJVV\\C$\\Users\\samee\\Desktop\\Learning\\local_container"
+		},
+		"ls_connect_filesystem_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "sameer.patnaik@hotmail.com"
+		},
+		"ls_connect_keyvault_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://lmn34-keyvault.vault.azure.net/"
+		},
+		"ls_connect_sql_server_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "sameer.patnaik@hotmail.com"
+		},
 		"containerUri": {
 			"type": "string",
 			"metadata": "URI to storage account containing linked ARM templates"
@@ -33,6 +85,39 @@
 				"parameters": {
 					"factoryName": {
 						"value": "[parameters('factoryName')]"
+					},
+					"ls_connect_adls_accountKey": {
+						"value": "[parameters('ls_connect_adls_accountKey')]"
+					},
+					"ls_connect_blob_connectionString": {
+						"value": "[parameters('ls_connect_blob_connectionString')]"
+					},
+					"ls_connect_filesystem_password": {
+						"value": "[parameters('ls_connect_filesystem_password')]"
+					},
+					"ls_connect_sql_server_connectionString": {
+						"value": "[parameters('ls_connect_sql_server_connectionString')]"
+					},
+					"ls_connect_sql_server_password": {
+						"value": "[parameters('ls_connect_sql_server_password')]"
+					},
+					"ls_connect_keyvault_properties_typeProperties_baseUrl": {
+						"value": "[parameters('ls_connect_keyvault_properties_typeProperties_baseUrl')]"
+					},
+					"ls_connect_adls_properties_typeProperties_url": {
+						"value": "[parameters('ls_connect_adls_properties_typeProperties_url')]"
+					},
+					"ls_connect_aws_s3_properties_typeProperties_accessKeyId": {
+						"value": "[parameters('ls_connect_aws_s3_properties_typeProperties_accessKeyId')]"
+					},
+					"ls_connect_filesystem_properties_typeProperties_host": {
+						"value": "[parameters('ls_connect_filesystem_properties_typeProperties_host')]"
+					},
+					"ls_connect_filesystem_properties_typeProperties_userId": {
+						"value": "[parameters('ls_connect_filesystem_properties_typeProperties_userId')]"
+					},
+					"ls_connect_sql_server_properties_typeProperties_userName": {
+						"value": "[parameters('ls_connect_sql_server_properties_typeProperties_userName')]"
 					}
 				}
 			},

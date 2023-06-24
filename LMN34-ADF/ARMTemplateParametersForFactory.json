@@ -4,6 +4,46 @@
 	"parameters": {
 		"factoryName": {
 			"value": "LMN34-ADF"
+		},
+		"ls_connect_adls_accountKey": {
+			"value": ""
+		},
+		"ls_connect_blob_connectionString": {
+			"value": ""
+		},
+		"ls_connect_filesystem_password": {
+			"value": ""
+		},
+		"ls_connect_sql_server_connectionString": {
+			"value": "Integrated Security=True;Data Source=localhost\\SQLEXPRESS;Initial Catalog=localDB"
+		},
+		"ls_connect_sql_server_password": {
+			"value": ""
+		},
+		"ls_connect_adls_properties_typeProperties_url": {
+			"value": "https://lmn34datalake.dfs.core.windows.net/"
+		},
+		"ls_connect_aws_s3_properties_typeProperties_accessKeyId": {
+			"value": {
+				"type": "AzureKeyVaultSecret",
+				"store": {
+					"referenceName": "ls_connect_keyvault",
+					"type": "LinkedServiceReference"
+				},
+				"secretName": "lmn34-aws-s3-accessID"
+			}
+		},
+		"ls_connect_filesystem_properties_typeProperties_host": {
+			"value": "\\\\LAPTOP-EBNIBJVV\\C$\\Users\\samee\\Desktop\\Learning\\local_container"
+		},
+		"ls_connect_filesystem_properties_typeProperties_userId": {
+			"value": "sameer.patnaik@hotmail.com"
+		},
+		"ls_connect_keyvault_properties_typeProperties_baseUrl": {
+			"value": "https://lmn34-keyvault.vault.azure.net/"
+		},
+		"ls_connect_sql_server_properties_typeProperties_userName": {
+			"value": "sameer.patnaik@hotmail.com"
 		}
 	}
 }
