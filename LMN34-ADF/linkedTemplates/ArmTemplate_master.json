@@ -28,6 +28,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'password' of 'ls_connect_sql_server'"
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"type": "string",
+			"defaultValue": "https://lmn34-keyvault.vault.azure.net/"
+		},
 		"ls_connect_adls_properties_typeProperties_url": {
 			"type": "string",
 			"defaultValue": "https://lmn34datalake.dfs.core.windows.net/"
@@ -100,6 +104,9 @@
 					},
 					"ls_connect_sql_server_password": {
 						"value": "[parameters('ls_connect_sql_server_password')]"
+					},
+					"AzureKeyVault1_properties_typeProperties_baseUrl": {
+						"value": "[parameters('AzureKeyVault1_properties_typeProperties_baseUrl')]"
 					},
 					"ls_connect_keyvault_properties_typeProperties_baseUrl": {
 						"value": "[parameters('ls_connect_keyvault_properties_typeProperties_baseUrl')]"

@@ -20,6 +20,9 @@
 		"ls_connect_sql_server_password": {
 			"value": ""
 		},
+		"AzureKeyVault1_properties_typeProperties_baseUrl": {
+			"value": "https://lmn34-keyvault.vault.azure.net/"
+		},
 		"ls_connect_adls_properties_typeProperties_url": {
 			"value": "https://lmn34datalake.dfs.core.windows.net/"
 		},
