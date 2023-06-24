@@ -1,0 +1,17 @@
+{
+	"name": "ls_connect_filesystem",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "\\\\LAPTOP-EBNIBJVV\\C$\\Users\\samee\\Desktop\\Learning\\local_container",
+			"userId": "sameer.patnaik@hotmail.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJhZTUyYjhmMi04NTQ4LTQzMTMtOWNmYS02YWE3ZjZhM2FjZTMiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHosted-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

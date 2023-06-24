@@ -1,0 +1,17 @@
+{
+	"name": "ls_connect_sql_server",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SqlServer",
+		"typeProperties": {
+			"connectionString": "integrated security=True;data source=localhost\\SQLEXPRESS;initial catalog=localDB",
+			"userName": "sameer.patnaik@hotmail.com",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiIxYjhmN2U3Zi0zNjUwLTQ5NTctYjcxZC00MWE5MmZiNWY4NWIiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "SelfHosted-IR",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}
